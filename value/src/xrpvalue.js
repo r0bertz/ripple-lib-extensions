@@ -47,7 +47,7 @@ class XRPValue extends Value {
     if (value.isNaN()) {
       throw new Error('Invalid result');
     }
-    return new XRPValue(value.round(6, BigNumber.ROUND_DOWN));
+    return new XRPValue(value.decimalPlaces(6, BigNumber.ROUND_DOWN));
   }
 
   equals(comparator) {

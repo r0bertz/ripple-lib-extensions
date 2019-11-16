@@ -61,7 +61,7 @@ class Value {
   }
 
   round(decimalPlaces: number, roundingMode: number) {
-    const result = this._value.round(decimalPlaces, roundingMode);
+    const result = this._value.decimalPlaces(decimalPlaces, roundingMode);
     return this._canonicalize(result);
   }
 

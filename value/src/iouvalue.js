@@ -16,7 +16,7 @@ class IOUValue extends Value {
   constructor(value: string | BigNumber, roundingMode: ?number = null,
   base: ?number = null) {
 
-    super(new BigNumber(value, base).toDigits(16, roundingMode));
+    super(new BigNumber(value, base).precision(16, roundingMode));
   }
 
   multiply(multiplicand: Value) {
